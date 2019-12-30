@@ -1,0 +1,2 @@
+docker run -v /tmp/certs:/certs -e SSL_SUBJECT=kubernetes.docker.internal stakater/ssl-certs-generator:1.0
+docker build -f Dockerfile -t server /tmp/certs

@@ -1,0 +1,5 @@
+docker stop server
+docker run --rm -p 443:443 -d --name server server
+echo "testing connection"
+curl --cacert /tmp/certs/ca.pem https://kubernetes.docker.internal
+openssl s_client -connect kubernetes.docker.internal:443
